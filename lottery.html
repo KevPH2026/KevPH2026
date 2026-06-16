@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>85735 · 机场幸运彩票方案</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    max-width: 640px;
+    width: 100%;
+    background: linear-gradient(145deg, #111118, #0d0d14);
+    border: 1px solid #1a1a2e;
+    border-radius: 24px;
+    padding: 48px 40px;
+    box-shadow: 0 0 80px rgba(255, 215, 0, 0.04), 0 0 200px rgba(138, 43, 226, 0.03);
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  .icon {
+    font-size: 56px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+  }
+
+  .lucky-number {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 12px;
+    background: linear-gradient(135deg, #ffd700, #ffaa00, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    margin-bottom: 8px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .meta-line {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
+  }
+
+  .plan-item {
+    background: #14141f;
+    border: 1px solid #1e1e30;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 16px;
+    transition: border-color 0.2s;
+  }
+
+  .plan-item:hover {
+    border-color: #2a2a44;
+  }
+
+  .plan-item.primary {
+    border-color: #3a3020;
+    background: linear-gradient(135deg, #1a1a14, #14141f);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
+  }
+
+  .lottery-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .lottery-numbers {
+    font-size: 13px;
+    color: #888;
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .highlight-num {
+    color: #ffd700;
+    font-weight: 700;
+  }
+
+  .prize {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffd700;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .prize.max {
+    font-size: 16px;
+    background: linear-gradient(135deg, #ffd700, #ffaa00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bet-count {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+  }
+
+  .bet-count span {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #aaa;
+  }
+
+  .total-row {
+    margin-top: 28px;
+    padding: 20px 24px;
+    background: #0e0e18;
+    border: 1px solid #222;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .total-label {
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 2px;
+  }
+
+  .total-amount {
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffd700;
+    letter-spacing: 2px;
+  }
+
+  .footer {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 12px;
+    color: #444;
+    letter-spacing: 2px;
+  }
+
+  .footer .line {
+    display: block;
+    margin-top: 6px;
+    color: #333;
+    font-size: 11px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+    margin-left: 8px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 500px) {
+    .card { padding: 32px 20px; }
+    .lucky-number { font-size: 48px; letter-spacing: 8px; }
+    .plan-item { grid-template-columns: 1fr auto; }
+    .bet-count { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <!-- Header -->
+  <div class="header">
+    <div class="icon">🎰</div>
+    <div class="lucky-number">85735</div>
+    <div class="subtitle">机场幸运数字</div>
+    <div class="meta-line">
+      <span>📍 机场摇号</span>
+      <span>📅 2026.06.15</span>
+    </div>
+  </div>
+
+  <!-- 排列五 · 主力 -->
+  <div class="plan-item primary">
+    <div>
+      <div class="lottery-name">排列五 <span class="badge">主力</span></div>
+      <div class="lottery-numbers">直选 <span class="highlight-num">85735</span></div>
+    </div>
+    <div class="bet-count"><span>30</span>注</div>
+    <div class="prize">¥3,000,000</div>
+  </div>
+
+  <!-- 排列三 -->
+  <div class="plan-item">
+    <div>
+      <div class="lottery-name">排列三</div>
+      <div class="lottery-numbers">直选 <span class="highlight-num">857</span> + <span class="highlight-num">735</span></div>
+    </div>
+    <div class="bet-count"><span>30</span>注</div>
+    <div class="prize">¥31,200</div>
+  </div>
+
+  <!-- 福彩3D -->
+  <div class="plan-item">
+    <div>
+      <div class="lottery-name">福彩3D</div>
+      <div class="lottery-numbers">直选 <span class="highlight-num">857</span></div>
+    </div>
+    <div class="bet-count"><span>10</span>注</div>
+    <div class="prize">¥10,400</div>
+  </div>
+
+  <!-- 双色球 -->
+  <div class="plan-item">
+    <div>
+      <div class="lottery-name">双色球</div>
+      <div class="lottery-numbers">红 <span class="highlight-num">03 05 07 08 13 15</span> · 蓝 <span class="highlight-num">05</span></div>
+    </div>
+    <div class="bet-count"><span>14</span>注</div>
+    <div class="prize max">1000万+</div>
+  </div>
+
+  <!-- 大乐透 -->
+  <div class="plan-item">
+    <div>
+      <div class="lottery-name">大乐透</div>
+      <div class="lottery-numbers">前 <span class="highlight-num">03 05 07 08 35</span> · 后 <span class="highlight-num">03 05</span></div>
+    </div>
+    <div class="bet-count"><span>10</span>注</div>
+    <div class="prize max">1000万+</div>
+  </div>
+
+  <!-- Total -->
+  <div class="total-row">
+    <span class="total-label">总预算</span>
+    <span class="total-amount">¥188</span>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    中了是命，没中是故事
+    <span class="line">Generated by Agent 002 · KevPH</span>
+  </div>
+</div>
+
+</body>
+</html>
